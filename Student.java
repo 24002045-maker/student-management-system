@@ -1,5 +1,4 @@
 public class Student {
-
     private int id;
     private String name;
     private int age;
@@ -42,5 +41,13 @@ public class Student {
 
     public void setGpa(double gpa) {
         this.gpa = gpa;
+    }
+
+    @Override
+    public String toString() {
+        return "ID: " + id +
+               ", Name: " + name +
+               ", Age: " + age +
+               ", GPA: " + gpa;
     }
 }

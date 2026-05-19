@@ -1,0 +1,16 @@
+# Java compiled files
+*.class
+
+# VS Code workspace cache
+.vscode/*.log
+
+# Java language server cache
+.settings/
+.project
+.classpath
+bin/
+out/
+
+# OS files
+.DS_Store
+Thumbs.db

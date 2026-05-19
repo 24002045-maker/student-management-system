@@ -2,21 +2,17 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class DatabaseConnection {
+    private static final String URL =
+        "jdbc:mysql://localhost:3306/student_system";
+    private static final String USER = "root";
+    private static final String PASSWORD = "123456"; // replace this
 
     public static Connection getConnection() {
-
         try {
-
-            Connection conn = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/student_system",
-                "root",
-                "your_password"
-            );
-
-            return conn;
-
-        } catch(Exception e) {
-            System.out.println(e);
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            return DriverManager.getConnection(URL, USER, PASSWORD);
+        } catch (Exception e) {
+            e.printStackTrace();
             return null;
         }
     }
